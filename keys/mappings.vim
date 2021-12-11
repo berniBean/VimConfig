@@ -45,3 +45,4 @@ nnoremap <Leader>O O<Esc>^Da
 
 "Del berni
 nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>nt :NERDTreeFind<CR>
