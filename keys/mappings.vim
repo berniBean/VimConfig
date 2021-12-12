@@ -46,3 +46,15 @@ nnoremap <Leader>O O<Esc>^Da
 "Del berni
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+
+"OmniSharp Atajos
+" Supprot for different goto definitions for different file types.
+autocmd FileType cs nmap <silent> gd :OmniSharpGotoDefinition<CR>
+autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
+autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
+"autocmd FileType cs nnoremap <L><Space> :OmniSharpGetCodeActions<CR>
+autocmd FileType cs nnoremap <buffer><Leader>d :OmniSharpCodeFormat<CR>
+
+autocmd FileType cs nnoremap <buffer><Leader>k :OmniSharpFixUsings<CR>
+autocmd FileType ts nmap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
+autocmd FileType html nmap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
